@@ -10,3 +10,4 @@ WITH temporaryTable (averageValue) AS (
         SELECT EmployeeID,Name, Salary 
         FROM Employee, temporaryTable 
         WHERE Employee.Salary > temporaryTable.averageValue;
+![image](https://github.com/user-attachments/assets/af2d753b-17a8-40f9-ac8b-c9bd7d269265)
