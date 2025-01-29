@@ -1,6 +1,7 @@
-####Second Highesh Salary
+/*#########################################################
+Second Highesh Salary Using Subqueries
+#########################################################*/  
 
-Using Subqueries
 SELECT name, salary  
 FROM employee  
 WHERE salary = (  
@@ -9,13 +10,17 @@ WHERE salary = (
     WHERE salary < (SELECT MAX(salary) FROM employee)  
 );
 
-Using LIMIT
+/*#########################################################
+Second Highesh Salary Using LIMIT 
+#########################################################*/  
+
 select *from employee 
 group by salary 
 order by  salary desc limit 1,1;
 
-
-Using Common Table Expressions (CTEs)
+/*#########################################################
+Second Highesh Salary Using Common Table Expressions (CTEs)
+#########################################################*/  
 WITH RankedSalaries AS (  
     SELECT name, salary,  
            DENSE_RANK() OVER (ORDER BY salary DESC) AS Rank  
