@@ -3,7 +3,8 @@
 Common Table Expressions (CTEs), is a powerful tool that simplifies complex SQL queries, improves readability, and enhances performance by defining temporary result sets that can be reused multiple times. Whether we’re working on aggregating data, analyzing large datasets, or building complex reports, understanding how to use the WITH clause in SQL can significantly improve your querying experience.
 
 **Example:
-**WITH temporaryTable (averageValue) AS (
+**
+WITH temporaryTable (averageValue) AS (
     SELECT AVG(Salary)
     FROM Employee
 )
